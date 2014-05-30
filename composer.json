@@ -1,0 +1,28 @@
+{
+    "name": "tecnocreaciones/vzla-api-bundle",
+    "description": "API states, municipalities, parishes and regions of Venezuela",
+    "keywords": ["Base venezuela state municipality parish"],
+    "homepage": "https://github.com/tecnocreaciones",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carlos Mendoza",
+            "email": "inhack20@tecnocreaciones.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.1",
+        "doctrine/doctrine-fixtures-bundle": "2.*",
+        "stof/doctrine-extensions-bundle": "*",
+        "friendsofsymfony/rest-bundle":"@stable",
+        "tecnocreaciones/resource-bundle": "dev-master",
+        "nelmio/api-doc-bundle": "@stable"
+    },
+    "autoload": {
+        "psr-0": { "Tecnocreaciones\\Vzla\\FixturesBundle": "" }
+    },
+    "target-dir": "Tecnocreaciones/Vzla/FixturesBundle"
+}

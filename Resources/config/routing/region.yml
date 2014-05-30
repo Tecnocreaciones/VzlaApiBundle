@@ -1,0 +1,13 @@
+api_tecnocreaciones_vzla_entity_region_index:
+    pattern:  /regions
+    defaults:
+        _controller: api_tecnocreaciones_vzla_entity.controller.region:indexAction
+    requirements:
+        _method: GET
+        
+api_tecnocreaciones_vzla_entity_region_show:
+    pattern:  /regions/{id}
+    defaults:
+        _controller: api_tecnocreaciones_vzla_entity.controller.region:showAction
+    requirements:
+        _method: GET

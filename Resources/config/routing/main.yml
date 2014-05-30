@@ -1,0 +1,19 @@
+api_tecnocreaciones_vzla_entity_country:
+    resource: "@TecnocreacionesVzlaApiBundle/Resources/config/routing/country.yml"
+    prefix:   /
+    type: rest
+
+api_tecnocreaciones_vzla_entity_state:
+    resource: "@TecnocreacionesVzlaApiBundle/Resources/config/routing/state.yml"
+    prefix:   /
+    type: rest
+    
+api_tecnocreaciones_vzla_entity_city:
+    resource: "@TecnocreacionesVzlaApiBundle/Resources/config/routing/city.yml"
+    prefix:   /
+    type: rest
+    
+api_tecnocreaciones_vzla_entity_region:
+    resource: "@TecnocreacionesVzlaApiBundle/Resources/config/routing/region.yml"
+    prefix:   /
+    type: rest

@@ -1,0 +1,5 @@
+api_tecnocreaciones_vzla_entity_main:
+    resource: "@TecnocreacionesVzlaApiBundle/Resources/config/routing/main.yml"
+    prefix:   /vzla
+    type: rest
+    name_prefix:  api_

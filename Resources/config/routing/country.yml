@@ -1,0 +1,29 @@
+api_tecnocreaciones_vzla_entity_country_index:
+    pattern:  /countries
+    defaults:
+        _controller: api_tecnocreaciones_vzla_entity.controller.country:indexAction
+    requirements:
+        _method: GET
+        _format: json|xml
+            
+api_tecnocreaciones_vzla_entity_country_show:
+    pattern:  /countries/{id}
+    defaults:
+        _controller: api_tecnocreaciones_vzla_entity.controller.country:showAction
+    requirements:
+        _method: GET
+        
+api_tecnocreaciones_vzla_entity_country_states:
+    pattern:  /countries/{id}/states
+    defaults:
+        _controller: api_tecnocreaciones_vzla_entity.controller.country:getCountriesStatesAction
+    requirements:
+        _method: GET
+            
+api_tecnocreaciones_vzla_entity_country_regions:
+    pattern:  /countries/{id}/regions
+    method: GET
+    defaults:
+        _controller: api_tecnocreaciones_vzla_entity.controller.country:getCountriesRegionsAction
+    requirements:
+        _method: GET

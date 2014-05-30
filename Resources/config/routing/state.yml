@@ -1,0 +1,22 @@
+#tecnocreaciones_vzla_entity_state_index:
+#    pattern:  /states
+#    defaults:
+#        _controller: tecnocreaciones_vzla_entity.controller.state:indexAction
+        
+api_tecnocreaciones_vzla_entity_state_show:
+    pattern:  /states/{id}
+    defaults:
+        _controller: api_tecnocreaciones_vzla_entity.controller.state:showAction
+    requirements:
+        _method: GET
+    options:
+        expose: true
+        
+api_tecnocreaciones_vzla_entity_state_cities:
+    pattern:  /states/{id}/cities
+    defaults:
+        _controller: api_tecnocreaciones_vzla_entity.controller.state:getStateCitiesAction
+    requirements:
+        _method: GET
+    options:
+        expose: true
