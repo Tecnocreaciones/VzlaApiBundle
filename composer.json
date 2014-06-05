@@ -22,7 +22,7 @@
         "nelmio/api-doc-bundle": "@stable"
     },
     "autoload": {
-        "psr-0": { "Tecnocreaciones\\Vzla\\FixturesBundle": "" }
+        "psr-0": { "Tecnocreaciones\\Vzla\\ApiBundle": "" }
     },
-    "target-dir": "Tecnocreaciones/Vzla/FixturesBundle"
+    "target-dir": "Tecnocreaciones/Vzla/ApiBundle"
 }
