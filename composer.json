@@ -15,11 +15,10 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/framework-bundle": "~2.1",
-        "doctrine/doctrine-fixtures-bundle": "2.*",
-        "stof/doctrine-extensions-bundle": "*",
         "friendsofsymfony/rest-bundle":"@stable",
+        "nelmio/api-doc-bundle": "@stable",
         "tecnocreaciones/resource-bundle": "dev-master",
-        "nelmio/api-doc-bundle": "@stable"
+        "tecnocreaciones/vzla-entity-bundle": "dev-master"
     },
     "autoload": {
         "psr-0": { "Tecnocreaciones\\Vzla\\ApiBundle": "" }
