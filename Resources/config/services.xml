@@ -4,19 +4,6 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
-    <parameters>
-        <parameter key="tecnocreaciones_vzla_api.example.class">Tecnocreaciones\Vzla\ApiBundle\Example</parameter>
-    </parameters>
-
-    <services>
-        <service id="tecnocreaciones_vzla_api.example" class="%tecnocreaciones_vzla_api.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
-        </service>
-    </services>
-    -->
     <parameters>
         <parameter key="tecnocreaciones_vzla_api.event_listener.serialize.class">Tecnocreaciones\Vzla\ApiBundle\EventListener\SerializeEventListerner</parameter>
     </parameters>
@@ -30,6 +17,42 @@
             <call method="setTranslator">
                 <argument type="service" id="translator" />
             </call>
+        </service>
+        <service id="api_tecnocreaciones_vzla_entity.repository.city" class="%tecnocreaciones_vzla_entity.repository.city.class%" 
+            factory-service="tecnocreaciones_resource.manager_entity_repository"
+            factory-method="getRepository"
+        >
+            <argument>%tecnocreaciones_vzla_entity.city.class%</argument>
+        </service>
+        <service id="api_tecnocreaciones_vzla_entity.repository.country" class="%tecnocreaciones_vzla_entity.repository.country.class%" 
+            factory-service="tecnocreaciones_resource.manager_entity_repository"
+            factory-method="getRepository"
+        >
+            <argument>%tecnocreaciones_vzla_entity.country.class%</argument>
+        </service>
+        <service id="api_tecnocreaciones_vzla_entity.repository.municipality" class="%tecnocreaciones_vzla_entity.municipality.class%" 
+            factory-service="tecnocreaciones_resource.manager_entity_repository"
+            factory-method="getRepository"
+        >
+            <argument>%tecnocreaciones_vzla_entity.repository.municipality.class%</argument>
+        </service>
+        <service id="api_tecnocreaciones_vzla_entity.repository.parish" class="%tecnocreaciones_vzla_entity.repository.parish.class%" 
+            factory-service="tecnocreaciones_resource.manager_entity_repository"
+            factory-method="getRepository"
+        >
+            <argument>%tecnocreaciones_vzla_entity.parish.class%</argument>
+        </service>
+        <service id="api_tecnocreaciones_vzla_entity.repository.region" class="%tecnocreaciones_vzla_entity.repository.region.class%" 
+            factory-service="tecnocreaciones_resource.manager_entity_repository"
+            factory-method="getRepository"
+        >
+            <argument>%tecnocreaciones_vzla_entity.region.class%</argument>
+        </service>
+        <service id="api_tecnocreaciones_vzla_entity.repository.state" class="%tecnocreaciones_vzla_entity.repository.state.class%" 
+            factory-service="tecnocreaciones_resource.manager_entity_repository"
+            factory-method="getRepository"
+        >
+            <argument>%tecnocreaciones_vzla_entity.state.class%</argument>
         </service>
     </services>
 </container>
