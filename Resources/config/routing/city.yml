@@ -4,6 +4,8 @@ api_tecnocreaciones_vzla_entity_city_index:
         _controller: api_tecnocreaciones_vzla_entity.controller.city:indexAction
     requirements:
         _method: GET
+    options:
+        expose: true
         
 api_tecnocreaciones_vzla_entity_city_show:
     pattern:  /cities/{id}
