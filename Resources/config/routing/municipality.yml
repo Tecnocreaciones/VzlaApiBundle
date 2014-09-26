@@ -1,0 +1,7 @@
+api_tecnocreaciones_vzla_entity_municipality_by_state:
+    pattern:  /{stateId}/municipalities
+    defaults:
+        _controller: api_tecnocreaciones_vzla_entity.controller.municipality:getMunicipalitiesByStateAction
+        _format: json
+    options:
+        expose: true

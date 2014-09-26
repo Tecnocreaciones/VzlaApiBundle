@@ -30,4 +30,11 @@ class CityController extends \Tecnocreaciones\Bundle\ResourceBundle\Controller\R
         //$view->getSerializationContext()->setGroups('state');
         return $this->handleView($view);
     }
+    public function getCitiesByMunicipalityAction($municipalityId)
+    {    
+        $em = $this->getDoctrine()->getManager();
+        $states = $em->getRepository("Tecnocreaciones\Vzla\EntityBundle\Entity\City")->findCitiesByMunicipality($municipalityId);
+        $view = $this->view($states);
+        return $view;
+    }
 }

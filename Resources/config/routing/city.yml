@@ -13,3 +13,12 @@ api_tecnocreaciones_vzla_entity_city_show:
         _controller: api_tecnocreaciones_vzla_entity.controller.city:showAction
     requirements:
         _method: GET
+        
+api_tecnocreaciones_vzla_entity_city_by_municipality:
+    pattern:  /cities-by-municipality/{municipalityId}
+    defaults:
+        _controller: api_tecnocreaciones_vzla_entity.controller.city:getCitiesByMunicipalityAction
+    requirements:
+        _method: GET
+    options:
+        expose: true
