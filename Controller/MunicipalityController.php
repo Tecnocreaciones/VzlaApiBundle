@@ -23,6 +23,9 @@ class MunicipalityController extends \Tecnocreaciones\Bundle\ResourceBundle\Cont
         $em = $this->getDoctrine()->getManager();
         $municipalities = $em->getRepository("Tecnocreaciones\Vzla\EntityBundle\Entity\Municipality")->findMunicipalitiesByState($stateId);
         $view = $this->view($municipalities);
-        return $view;
+        
+        $view->getSerializationContext()->setGroups(array('list'));
+        
+        return $this->handleView($view);
     }
 }

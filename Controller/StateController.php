@@ -27,7 +27,7 @@ class StateController extends \Tecnocreaciones\Bundle\ResourceBundle\Controller\
             ->setTemplateVar($this->config->getResourceName())
             ->setData($resources)
         ;
-        //$view->getSerializationContext()->setGroups('state');
+        $view->getSerializationContext()->setGroups('list');
         return $this->handleView($view);
     }
     
@@ -39,7 +39,7 @@ class StateController extends \Tecnocreaciones\Bundle\ResourceBundle\Controller\
             ->setTemplateVar($this->config->getResourceName())
             ->setData($resource->getCities())
         ;
-        $view->getSerializationContext()->setGroups('state');
+        $view->getSerializationContext()->setGroups('list');
         return $this->handleView($view);
     }
 }

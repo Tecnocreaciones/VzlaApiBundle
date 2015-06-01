@@ -35,6 +35,7 @@ class CityController extends \Tecnocreaciones\Bundle\ResourceBundle\Controller\R
         $em = $this->getDoctrine()->getManager();
         $states = $em->getRepository("Tecnocreaciones\Vzla\EntityBundle\Entity\City")->findCitiesByMunicipality($municipalityId);
         $view = $this->view($states);
-        return $view;
+        $view->getSerializationContext()->setGroups(array('list'));
+        return $this->handleView($view);
     }
 }
