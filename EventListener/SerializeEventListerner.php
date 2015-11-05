@@ -107,7 +107,7 @@ class SerializeEventListerner implements EventSubscriberInterface
         return $this->translator;
     }
 
-    public function setTranslator(\Symfony\Bundle\FrameworkBundle\Translation\Translator $translator) {
+    public function setTranslator(\Symfony\Component\Translation\TranslatorInterface $translator) {
         $this->translator = $translator;
     }
 }
