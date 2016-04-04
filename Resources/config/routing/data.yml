@@ -1,0 +1,27 @@
+## Parroquia
+api_tecnocreaciones_vzla_entity_parishes_by_municipality:
+    pattern:  /parishes-by-municipality/{municipalityId}
+    defaults:
+        _controller: TecnocreacionesVzlaApiBundle:Data:getParishesByMunicipality
+    requirements:
+        _method: GET
+    options:
+        expose: true
+# Ciudad
+vzla_entity_cities_by_parish:
+    pattern:  /cities-by-parish/{parishId}
+    defaults:
+        _controller: TecnocreacionesVzlaApiBundle:Data:getCitiesByParish
+    requirements:
+        _method: GET
+    options:
+        expose: true
+# Urbanizacion
+vzla_entity_urbanizations_by_city:
+    pattern:  /urbanizations-by-city/{cityId}
+    defaults:
+        _controller: TecnocreacionesVzlaApiBundle:Data:getUrbanizationByCity
+    requirements:
+        _method: GET
+    options:
+        expose: true

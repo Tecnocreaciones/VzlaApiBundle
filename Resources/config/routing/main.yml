@@ -22,3 +22,7 @@ api_tecnocreaciones_vzla_entity_municipality:
     resource: "@TecnocreacionesVzlaApiBundle/Resources/config/routing/municipality.yml"
     prefix:   /
     type: rest
+    
+api_tecnocreaciones_vzla_entity_data:
+    resource: "@TecnocreacionesVzlaApiBundle/Resources/config/routing/data.yml"
+    prefix:   /
