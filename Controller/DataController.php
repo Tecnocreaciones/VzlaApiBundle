@@ -42,10 +42,10 @@ class DataController extends FOSRestController
         return $this->handleView($view);
     }
     
-    public function getUrbanizationByCityAction($cityId)
+    public function getUrbanizationByCityAction($cityId,$parishId)
     {    
         $em = $this->getDoctrine()->getManager();
-        $data = $em->getRepository("Tecnocreaciones\Vzla\EntityBundle\Entity\Urbanization")->getUrbanizationByCity($cityId);
+        $data = $em->getRepository("Tecnocreaciones\Vzla\EntityBundle\Entity\Urbanization")->getUrbanizationByCity($cityId,$parishId);
         $view = $this->view($data);
         $view->setFormat("json");
         $view->getSerializationContext()->setGroups(array('list'));

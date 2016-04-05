@@ -18,7 +18,7 @@ vzla_entity_cities_by_parish:
         expose: true
 # Urbanizacion
 vzla_entity_urbanizations_by_city:
-    pattern:  /urbanizations-by-city/{cityId}
+    pattern:  /urbanizations-by-city/{cityId}-{parishId}
     defaults:
         _controller: TecnocreacionesVzlaApiBundle:Data:getUrbanizationByCity
     requirements:
